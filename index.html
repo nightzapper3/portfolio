@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aditya Nair — Developer, designer, and digital craftsman. Explore a curated portfolio of work, expertise, and creative vision.">
+    <meta name="author" content="Aditya Nair">
+    <title>Aditya Nair — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Global Scroll Path Container -->
+    <div class="global-path-container">
+        <svg id="globalScrollSvg">
+            <path id="globalScrollTrack" class="global-track" />
+            <path id="globalScrollFlow" class="global-flow" />
+            <g id="f1CarGroup" style="opacity: 0; transition: opacity 0.3s ease; transform-origin: center;">
+                <path d="M 12 0 L 8 -2 L 8 -6 L 6 -6 L 6 -2 L 0 -4 L -8 -4 L -8 -6 L -12 -6 L -12 -2 L -14 -2 L -14 -6 L -16 -6 L -16 6 L -14 6 L -14 2 L -12 2 L -12 6 L -8 6 L -8 4 L 0 4 L 6 2 L 6 6 L 8 6 L 8 2 Z" fill="var(--color-accent-gold-dark)" />
+                <rect x="4" y="-8" width="5" height="3" fill="#111" rx="1" />
+                <rect x="4" y="5" width="5" height="3" fill="#111" rx="1" />
+                <rect x="-13" y="-9" width="6" height="4" fill="#111" rx="1" />
+                <rect x="-13" y="5" width="6" height="4" fill="#111" rx="1" />
+                <ellipse cx="-2" cy="0" rx="3" ry="1.5" fill="#111" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-line"></span>
+            <span class="preloader-text">Aditya Nair</span>
+            <span class="preloader-sub">Portfolio &mdash; 2026</span>
+        </div>
+    </div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">Aditya<span class="logo-dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link" data-section="about"><span>About</span></a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills"><span>Expertise</span></a></li>
+                <li><a href="#work" class="nav-link" data-section="work"><span>Work</span></a></li>
+                <li><a href="#certifications" class="nav-link" data-section="certifications"><span>Credentials</span></a></li>
+                <li><a href="#hobbies" class="nav-link" data-section="hobbies"><span>Passions</span></a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact"><span>Contact</span></a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span class="eyebrow-text">Developer &amp; Designer</span>
+            </div>
+            <h1 class="hero-name" id="heroName">
+                <span class="name-line"><span class="name-word" data-delay="0">Aditya</span></span>
+                <span class="name-line"><span class="name-word" data-delay="1">Nair</span></span>
+            </h1>
+            <p class="hero-philosophy" id="heroPhilosophy">
+                <span class="phil-word">I</span>
+                <span class="phil-word">craft</span>
+                <span class="phil-word">digital</span>
+                <span class="phil-word">experiences</span>
+                <span class="phil-word">that</span>
+                <span class="phil-word">feel</span>
+                <span class="phil-word"><em>inevitable.</em></span>
+            </p>
+            <div class="hero-footer">
+                <div class="hero-scroll">
+                    <span class="scroll-label">Scroll</span>
+                    <span class="scroll-line-anim"></span>
+                </div>
+                <div class="hero-location">
+                    <span>Based in</span>
+                    <span class="location-name">Trivandrum, IND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track" id="marqueeTrack">
+            <span class="marquee-item">Full-Stack Development</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">UI/UX Design</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Brand Strategy</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Creative Direction</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">System Architecture</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Design Engineering</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Full-Stack Development</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">UI/UX Design</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Brand Strategy</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Creative Direction</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">System Architecture</span>
+            <span class="marquee-sep">&bull;</span>
+            <span class="marquee-item">Design Engineering</span>
+            <span class="marquee-sep">&bull;</span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">01</span>
+                <span class="label-line"></span>
+                <span class="label-text">About</span>
+            </div>
+            <div class="about-layout">
+                <div class="about-heading reveal-up">
+                    <h2>A developer who <br><em>designs</em>, and a designer <br>who <em>codes.</em></h2>
+                </div>
+                <div class="about-body">
+                    <p class="about-text reveal-up">With over five years navigating the intersection of engineering and aesthetics, I build products that are as thoughtful under the hood as they are on the surface. My work lives where precision meets poetry &mdash; clean architecture dressed in compelling design.</p>
+                    <p class="about-text reveal-up">I believe every pixel should earn its place. Every interaction should feel considered. Every system should scale with grace. This philosophy has guided my work with startups, agencies, and enterprise teams across the globe.</p>
+                    <div class="about-stats reveal-up">
+                        <div class="stat">
+                            <span class="stat-num" data-target="50">0</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="5">0</span>
+                            <span class="stat-label">Years of Craft</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="30">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / Expertise -->
+    <section class="section section-dark" id="skills">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">02</span>
+                <span class="label-line"></span>
+                <span class="label-text">Expertise</span>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card reveal-up" data-delay="0">
+                    <span class="card-number">01</span>
+                    <h3>Frontend<br>Engineering</h3>
+                    <p>Crafting responsive, performant interfaces with React, Next.js, TypeScript, and modern CSS. Pixel-perfect execution meets fluid interaction design.</p>
+                    <ul class="card-tags">
+                        <li>React / Next.js</li>
+                        <li>TypeScript</li>
+                        <li>CSS Architecture</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+                <div class="expertise-card reveal-up" data-delay="100">
+                    <span class="card-number">02</span>
+                    <h3>Backend<br>Architecture</h3>
+                    <p>Designing scalable APIs and microservices with Node.js, Python, and cloud-native patterns. Security-first, performance-obsessed.</p>
+                    <ul class="card-tags">
+                        <li>Node.js / Express</li>
+                        <li>Python / Django</li>
+                        <li>PostgreSQL</li>
+                        <li>GraphQL</li>
+                    </ul>
+                </div>
+                <div class="expertise-card reveal-up" data-delay="200">
+                    <span class="card-number">03</span>
+                    <h3>Design<br>&amp; Direction</h3>
+                    <p>From wireframe to final polish &mdash; leading visual identity, interaction design, and motion systems that elevate the user experience.</p>
+                    <ul class="card-tags">
+                        <li>Figma / Prototyping</li>
+                        <li>Design Systems</li>
+                        <li>Motion Design</li>
+                        <li>Brand Identity</li>
+                    </ul>
+                </div>
+                <div class="expertise-card reveal-up" data-delay="300">
+                    <span class="card-number">04</span>
+                    <h3>Cloud<br>&amp; DevOps</h3>
+                    <p>Orchestrating infrastructure with AWS, Docker, and CI/CD pipelines. Building systems that deploy with confidence and scale without friction.</p>
+                    <ul class="card-tags">
+                        <li>AWS / GCP</li>
+                        <li>Docker / K8s</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="section" id="work">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">03</span>
+                <span class="label-line"></span>
+                <span class="label-text">Selected Work</span>
+            </div>
+            <div class="work-list">
+                <a href="#" class="work-item reveal-up" data-delay="0">
+                    <div class="work-meta">
+                        <span class="work-year">2026</span>
+                        <span class="work-category">Platform</span>
+                    </div>
+                    <h3 class="work-title">NeoVerse<span class="work-arrow">&nearr;</span></h3>
+                    <p class="work-desc">Next-gen social platform with real-time collaboration, AI recommendations, and immersive 3D environments.</p>
+                    <div class="work-stack">
+                        <span>React</span><span>Node.js</span><span>WebGL</span><span>Socket.io</span>
+                    </div>
+                </a>
+                <a href="#" class="work-item reveal-up" data-delay="100">
+                    <div class="work-meta">
+                        <span class="work-year">2025</span>
+                        <span class="work-category">Dashboard</span>
+                    </div>
+                    <h3 class="work-title">CryptoVault<span class="work-arrow">&nearr;</span></h3>
+                    <p class="work-desc">Real-time cryptocurrency portfolio tracker with predictive analytics, automated signals, and institutional-grade charting.</p>
+                    <div class="work-stack">
+                        <span>Next.js</span><span>Python</span><span>D3.js</span><span>Redis</span>
+                    </div>
+                </a>
+                <a href="#" class="work-item reveal-up" data-delay="200">
+                    <div class="work-meta">
+                        <span class="work-year">2025</span>
+                        <span class="work-category">Creative Tool</span>
+                    </div>
+                    <h3 class="work-title">SynthWave Studio<span class="work-arrow">&nearr;</span></h3>
+                    <p class="work-desc">AI-powered music generation platform using neural networks to compose custom tracks with interactive waveform visualization.</p>
+                    <div class="work-stack">
+                        <span>Python</span><span>TensorFlow</span><span>Vue.js</span><span>WebAudio</span>
+                    </div>
+                </a>
+                <a href="#" class="work-item reveal-up" data-delay="300">
+                    <div class="work-meta">
+                        <span class="work-year">2024</span>
+                        <span class="work-category">E-Commerce</span>
+                    </div>
+                    <h3 class="work-title">Atelier<span class="work-arrow">&nearr;</span></h3>
+                    <p class="work-desc">Luxury fashion marketplace with AR try-on, curated collections, and a bespoke shopping experience for discerning clients.</p>
+                    <div class="work-stack">
+                        <span>Next.js</span><span>Stripe</span><span>Sanity</span><span>Three.js</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications / Credentials -->
+    <section class="section section-dark" id="certifications">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">04</span>
+                <span class="label-line"></span>
+                <span class="label-text">Credentials</span>
+            </div>
+            <h2 class="credentials-heading reveal-up">Recognition &amp; <em>Certifications</em></h2>
+            <div class="credentials-list">
+                <div class="credential-item reveal-up" data-delay="0">
+                    <div class="cred-year">2025</div>
+                    <div class="cred-body">
+                        <h3>AWS Solutions Architect — Professional</h3>
+                        <p>Amazon Web Services</p>
+                    </div>
+                    <div class="cred-id">AWS-SAP-2025</div>
+                </div>
+                <div class="credential-item reveal-up" data-delay="80">
+                    <div class="cred-year">2024</div>
+                    <div class="cred-body">
+                        <h3>Google Professional Cloud Developer</h3>
+                        <p>Google Cloud Platform</p>
+                    </div>
+                    <div class="cred-id">GCP-PCD-2024</div>
+                </div>
+                <div class="credential-item reveal-up" data-delay="160">
+                    <div class="cred-year">2024</div>
+                    <div class="cred-body">
+                        <h3>Meta Front-End Developer Professional</h3>
+                        <p>Meta (via Coursera)</p>
+                    </div>
+                    <div class="cred-id">META-FED-2024</div>
+                </div>
+                <div class="credential-item reveal-up" data-delay="240">
+                    <div class="cred-year">2023</div>
+                    <div class="cred-body">
+                        <h3>Certified Kubernetes Administrator</h3>
+                        <p>The Linux Foundation</p>
+                    </div>
+                    <div class="cred-id">LF-CKA-2023</div>
+                </div>
+                <div class="credential-item reveal-up" data-delay="320">
+                    <div class="cred-year">2023</div>
+                    <div class="cred-body">
+                        <h3>MongoDB Certified Developer Associate</h3>
+                        <p>MongoDB University</p>
+                    </div>
+                    <div class="cred-id">MDB-DEV-2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies / Passions -->
+    <section class="section" id="hobbies">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">05</span>
+                <span class="label-line"></span>
+                <span class="label-text">Passions</span>
+            </div>
+            <h2 class="passions-heading reveal-up">When I'm not writing code,<br>you'll find me &mdash;</h2>
+            <div class="passions-grid">
+                <div class="passion-item reveal-up" data-delay="0">
+                    <span class="passion-number">01</span>
+                    <h3>Composing Soundscapes</h3>
+                    <p>Producing ambient electronic and synthwave music. Sound design is where logic meets emotion &mdash; not unlike writing elegant code.</p>
+                </div>
+                <div class="passion-item reveal-up" data-delay="80">
+                    <span class="passion-number">02</span>
+                    <h3>Chasing Light</h3>
+                    <p>Street photography and long-exposure work. I'm drawn to the interplay between shadow, structure, and the accidental poetry of urban spaces.</p>
+                </div>
+                <div class="passion-item reveal-up" data-delay="160">
+                    <span class="passion-number">03</span>
+                    <h3>Reading Deeply</h3>
+                    <p>Cyberpunk fiction, systems thinking, and design philosophy. Currently re-reading Italo Calvino's "If on a winter's night a traveler."</p>
+                </div>
+                <div class="passion-item reveal-up" data-delay="240">
+                    <span class="passion-number">04</span>
+                    <h3>Open-Source Craft</h3>
+                    <p>Contributing to tools and libraries that make the web better for everyone. Building in public, learning in community.</p>
+                </div>
+                <div class="passion-item reveal-up" data-delay="320">
+                    <span class="passion-number">05</span>
+                    <h3>World-Building</h3>
+                    <p>Exploring cities, cultures, and cuisines. From Tokyo's quiet temples to Berlin's chaotic energy &mdash; each place reshapes how I see design.</p>
+                </div>
+                <div class="passion-item reveal-up" data-delay="400">
+                    <span class="passion-number">06</span>
+                    <h3>Competitive Gaming</h3>
+                    <p>Strategy games and FPS arenas sharpen my reflexes and decision-making. The feedback loop of play mirrors iterative design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Roadmap (NEW FEATURE) -->
+    <section class="section" id="roadmap">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">06</span>
+                <span class="label-line"></span>
+                <span class="label-text">Roadmap</span>
+            </div>
+            <h2 class="roadmap-heading reveal-up">The Future &mdash; <em>Roadmap</em></h2>
+            
+            <div class="roadmap-grid">
+                <div class="roadmap-card glass-panel reveal-up" data-delay="0">
+                    <span class="roadmap-phase">Phase 01</span>
+                    <h3>Core Engine</h3>
+                    <p>Focusing on refining web layout performance, design token integrity, and lightweight animation loops.</p>
+                    <span class="roadmap-status status-complete">Completed</span>
+                </div>
+                <div class="roadmap-card glass-panel reveal-up" data-delay="100">
+                    <span class="roadmap-phase">Phase 02</span>
+                    <h3>Immersive WebGL</h3>
+                    <p>Integrating high-end WebGL shaders and lightweight three.js modules for creative interactive backgrounds.</p>
+                    <span class="roadmap-status status-active">Active</span>
+                </div>
+                <div class="roadmap-card glass-panel reveal-up" data-delay="200">
+                    <span class="roadmap-phase">Phase 03</span>
+                    <h3>Bespoke AI Assistant</h3>
+                    <p>Deploying a custom-trained model directly connected to the site to answer design queries in real-time.</p>
+                    <span class="roadmap-status status-upcoming">Upcoming</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="section-label reveal-up">
+                <span class="label-index">07</span>
+                <span class="label-line"></span>
+                <span class="label-text">Contact</span>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-heading reveal-up">
+                    <h2>Let's make<br>something <em>remarkable.</em></h2>
+                    <p class="contact-sub">Have a project, an idea, or just want to say hello? I'd love to hear from you.</p>
+                </div>
+                <div class="contact-body">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row reveal-up">
+                            <div class="form-group">
+                                <label for="nameInput">Name</label>
+                                <input type="text" id="nameInput" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailInput">Email</label>
+                                <input type="email" id="emailInput" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group reveal-up">
+                            <label for="subjectInput">Subject</label>
+                            <input type="text" id="subjectInput" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group reveal-up">
+                            <label for="messageInput">Message</label>
+                            <textarea id="messageInput" rows="5" placeholder="Tell me about your vision..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-send reveal-up" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-line"></span>
+                        </button>
+                    </form>
+                    <div class="contact-details reveal-up">
+                        <div class="contact-block">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:aditya@nair.dev">aditya@nair.dev</a>
+                        </div>
+                        <div class="contact-block">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+919048711207">+91 904 871 1207</a>
+                        </div>
+                        <div class="contact-block">
+                            <span class="contact-label">Location</span>
+                            <span>Trivandrum, IND</span>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://github.com/nightzapper3" target="_blank" aria-label="GitHub">GitHub</a>
+                            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                            <a href="#" aria-label="Dribbble">Dribbble</a>
+                            <a href="#" aria-label="Twitter/X">X (Twitter)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-clock-wrapper">
+            <div class="footer-clock glass-panel" id="footerClockContainer">
+                <span class="clock-label">Local Time</span>
+                <span class="clock-time" id="liveClock">12:00:00 AM</span>
+                <canvas id="dinoCanvas" width="400" height="150"></canvas>
+                <span class="clock-message" id="clockMessage">Time is Precious.</span>
+            </div>
+        </div>
+
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-copy">&copy; 2026 Aditya Nair</span>
+                <span class="footer-note">Designed with intention.</span>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://github.com/nightzapper3" target="_blank" class="footer-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
